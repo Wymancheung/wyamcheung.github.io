@@ -5,9 +5,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    //ScrollMagic
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     
+    //AOS
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />	  
+	  
     <title>你好，GitHub</title>
     <style>
 .square {
@@ -31,9 +35,14 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
 </p>
   <div class="square" id="my-sticky-element"></div>  
+<div class="square" data-aos="fade-in"></div>  
 <div class="square" id="my-sticky-element"></div>  
-<div class="square" id="my-sticky-element"></div>  
-     <script>
+     
+	  
+	  
+	  
+	//ScrollMagic  
+        <script>
 	    // init controller
 	var controller = new ScrollMagic.Controller();
 
@@ -44,6 +53,14 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 	})
 		.setPin('#my-sticky-element') // pins the element for the the scene's duration
 		.addTo(controller); // assign the scene to the controller
+	     
+	     
+     </script>
+	
+	//AOS  
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+	     AOS.init();
      </script>
     
   </body>
