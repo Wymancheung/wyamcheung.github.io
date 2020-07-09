@@ -6,7 +6,8 @@
 		<!--ScrollMagic-->
 		<script src="ScrollMagic.min.js"></script>
 		<script src="debug.addIndicators.js"></script>
-		<script src="debug.addIndicators.min.js"></script>
+		<script src="debug.addIndicators.min.js">
+		</script><script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
     
 		<!--AOS-->
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />	  
@@ -73,6 +74,7 @@
 
 			// build scenes
 			new ScrollMagic.Scene({triggerElement: "#parallax1"})
+					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
 					.addIndicators()
 					.addTo(controller);
 	     
