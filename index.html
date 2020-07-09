@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
-
-  
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    //ScrollMagic
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<!--ScrollMagic-->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     
-    //AOS
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />	  
+		<!--AOS-->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />	  
 	  
-    <title>你好，GitHub</title>
-    <style>
-.square {
-  height: 100px;
-  width: 100px;
-  background-color: #555;
-}
- .square2 {
-  height: 50px;
-  width: 50px;
-  background-color: red;
-}
+		<title>你好，GitHub</title>
+		<style>
+			.square {
+			  height: 100px;
+			  width: 100px;
+			  background-color: #555;
+			}
+			
+			 .square2 {
+			  height: 50px;
+			  width: 50px;
+			  background-color: red;
+			}
+			
+			.responsive {
+			  max-width: 100%;
+			  height: auto;
+			}
       
-</style>
-  </head>
-  <body>
-    <h1 font-family="Comic Sans MS,arial,helvetica,sans-serif">覺得厲害</h1>
-    <p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-</p>
-	  <img src="3d1aeb4d-1500-4f02-8eff-f7ac161b75e8_9d7300a7-86e2-406e-9230-eacb5390a809_300x.jpg" alt="willyoumarryme" id="my-sticky-element">
-	  <img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" data-aos="fade-in">
-  //<div class="square" id="my-sticky-element"></div>  
-//<div class="square" data-aos="fade-in"></div>  
-//<div class="square" id="my-sticky-element"></div>  
+		</style>
+  	</head>
+  	<body>
+    		<h1 font-family="Comic Sans MS,arial,helvetica,sans-serif">覺得厲害</h1>
+   		<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+			Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+		</p>
+	  	<img src="3d1aeb4d-1500-4f02-8eff-f7ac161b75e8_9d7300a7-86e2-406e-9230-eacb5390a809_300x.jpg" alt="willyoumarryme" id="my-sticky-element" class="responsive">
+	  	<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" data-aos="fade-in" class="responsive">
+		 <!--<div class="square" id="my-sticky-element"></div>  
+		<div class="square" data-aos="fade-in"></div>  
+		<div class="square" id="my-sticky-element"></div> --> 
      
 	  
 	  
 	  
-	//ScrollMagic  
-        <script>
-	    // init controller
-	var controller = new ScrollMagic.Controller();
+		<!--ScrollMagic-->
+       		 <script>
+		    // init controller
+		var controller = new ScrollMagic.Controller();
 
-	// create a scene
-	new ScrollMagic.Scene({
-		duration: 100, // the scene should last for a scroll distance of 100px
-		offset: 50 // start this scene after scrolling for 50px
-	})
-		.setPin('#my-sticky-element') // pins the element for the the scene's duration
-		.addTo(controller); // assign the scene to the controller
+		// create a scene
+		new ScrollMagic.Scene({
+			duration: 100, // the scene should last for a scroll distance of 100px
+			offset: 50 // start this scene after scrolling for 50px
+		})
+			.setPin('#my-sticky-element') // pins the element for the the scene's duration
+			.addTo(controller); // assign the scene to the controller
 	     
 	     
-     </script>
-	
-	//AOS  
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-     <script>
-	     AOS.init();
-     </script>
+     		</script>
+		
+		<!--AOS-->  
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
     
   </body>
 </html>
