@@ -15,14 +15,18 @@
 	  
 		<title>你好，GitHub</title>
 		<style>
-			.parallaxParent {
-				height: 100vh;
-				overflow: hidden;
-			}
-			.parallaxParent > * {
-				height: 200%;
-				position: relative;
-				top: -100%;
+			.parallax {
+			  /* The image used */
+			  background-image: url("131648-pink-blue-and-white-polygonal-abstract-background-design.jpg.jpg");
+
+			  /* Set a specific height */
+			  height: 500px;
+
+			  /* Create the parallax scrolling effect */
+			  background-attachment: fixed;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
 			}
 			
 			.responsive {
@@ -47,9 +51,8 @@
   	<body margin="0">
     		<!--<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" id="backgroundImage">-->
 		<img src="3d1aeb4d-1500-4f02-8eff-f7ac161b75e8_9d7300a7-86e2-406e-9230-eacb5390a809_300x.jpg" alt="" class="responsive">
-		<div id="parallax1" class="parallaxParent">
-			<div style="background-image: url(131648-pink-blue-and-white-polygonal-abstract-background-design.jpg);"></div>
-		</div>
+		
+		<div class="parallax"></div>
 		
 		<h1 font-family="Comic Sans MS,arial,helvetica,sans-serif">覺得厲害</h1>
    		<p>
@@ -70,14 +73,7 @@
 	  
 		<!--ScrollMagic-->
        		 <script>
-			// init controller
-			var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-
-			// build scenes
-			new ScrollMagic.Scene({triggerElement: "#parallax1"})
-					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
+			
 	     
 	     
      		</script>
