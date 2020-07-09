@@ -12,16 +12,14 @@
 	  
 		<title>你好，GitHub</title>
 		<style>
-			.square {
-			  	height: 100px;
-			  	width: 100px;
-			  	background-color: #555;
+			.parallaxParent {
+				height: 100vh;
+				overflow: hidden;
 			}
-			
-			 .square2 {
-				height: 50px;
-				width: 50px;
-				background-color: red;
+			.parallaxParent > * {
+				height: 200%;
+				position: relative;
+				top: -100%;
 			}
 			
 			.responsive {
@@ -44,7 +42,12 @@
 		</style>
   	</head>
   	<body margin="0">
-    		<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" id="backgroundImage">
+    		<!--<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" id="backgroundImage">-->
+		
+		<div id="parallax1" class="parallaxParent">
+			<div style="background-image: url(131648-pink-blue-and-white-polygonal-abstract-background-design.jpg);"></div>
+		</div>
+		
 		<h1 font-family="Comic Sans MS,arial,helvetica,sans-serif">覺得厲害</h1>
    		<p>
 			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -64,16 +67,14 @@
 	  
 		<!--ScrollMagic-->
        		 <script>
-		    // init controller
-		var controller = new ScrollMagic.Controller();
+			// init controller
+			var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
-		// create a scene
-		new ScrollMagic.Scene({
-			duration: 100, // the scene should last for a scroll distance of 100px
-			offset: 50 // start this scene after scrolling for 50px
-		})
-			.setPin('#my-sticky-element') // pins the element for the the scene's duration
-			.addTo(controller); // assign the scene to the controller
+			// build scenes
+			new ScrollMagic.Scene({triggerElement: "#parallax1"})
+					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
 	     
 	     
      		</script>
