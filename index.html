@@ -117,13 +117,13 @@
 			
 		<div id="trigger"></div>
 		<!--<div id="pin" class="Once"></div>  <img src="path880.png" alt="880">-->
-		
-			<p id="pin">
+		<div>
+			<p>
 			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 			Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
 			Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
 			</p>
-		
+		</div>
 		
 		
 		
@@ -144,7 +144,7 @@
 			var controller = new ScrollMagic.Controller();
 			 
 	    		// build scenes
-			new ScrollMagic.Scene({duration: 2000})
+			new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000})
 				.setPin("#pin")
 				//.addIndicators() // add indicators (requires plugin)
 				.addTo(controller);
