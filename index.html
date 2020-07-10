@@ -17,9 +17,8 @@
 		<style>
 			body, html {
 				height: 100%;
+				width:100%;
 				margin: 0;
-				font: 400 15px/1.8 "Lato", sans-serif;
-				color: #777;
 			}
 			
 			.parallax {
@@ -149,7 +148,7 @@
 			var controller = new ScrollMagic.Controller();
 			 
 	    		// build scenes
-			new ScrollMagic.Scene({duration: 1000})
+			new ScrollMagic.Scene({duration: 200%})
 				.setPin("#pin")
 				//.addIndicators() // add indicators (requires plugin)
 				.addTo(controller);
