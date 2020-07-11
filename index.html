@@ -70,7 +70,7 @@
 				width: 20%;
 				max-width: 150px;
 			  	height: auto;
-				bottom: 2%;
+				bottom: 10%;
 				margin: auto;
 				left: 0;
 				right: 0;
@@ -158,6 +158,10 @@
 			
 			new ScrollMagic.Scene()
 				.setTween("#John", 2, {opacity: "1", delay: 3}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene()
+				.setTween("#Scrolldown", 2, {bottom: 2%, delay: 1}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			
