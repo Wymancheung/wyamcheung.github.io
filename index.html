@@ -103,6 +103,8 @@
 				left: 0;
 				right: 0;
 				text-align: center;
+				
+				opacity: 0;
 			}
       
 		</style>
@@ -166,11 +168,17 @@
 				.setTween("#Scrolldown", 2, {opacity: "1", bottom: "2%", delay: 4}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
+			new ScrollMagic.Scene({triggerElement: "#trigger", duration: 800})
+				.setTween("#pin", {opacity: "1"}) // trigger a TweenMax.to tween
+				.addTo(controller);
 			
-			//new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000, offset: 150})
-			//	.setPin("#pin")
-				//.addIndicators() // add indicators (requires plugin)
-			//	.addTo(controller);
+			new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000, offset: 150})
+				.setPin("#pin")
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger", duration: 800, offset: 1200})
+				.setTween("#pin", {opacity: "0"}) // trigger a TweenMax.to tween
+				.addTo(controller);
 		</script>
 		
 		
