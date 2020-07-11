@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<!--ScrollMagic-->
+		<script src="ScrollMagic.min.js"></script>
+		<!--<script src="debug.addIndicators.js"></script>
+		<script src="debug.addIndicators.min.js"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+		<script src="animation.gsap.js"></script>
+    
+		<!--AOS-->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	  
+		<title>你好，GitHub</title>
+		<style>
+			body, html {
+				height: 100%;
+				margin: 0;
+				background-color: white;
+			}
+			
+			.parallax {
+				/* The image used */
+				background-image: url("image1025.jpg");
+
+				/* Set a specific height */
+				min-height: 100%;
+				
+
+				/* Create the parallax scrolling effect */
+				/*background-attachment: fixed;*/
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.parallax2 {
+				/* The image used */
+				background-image: url("3d1aeb4d-1500-4f02-8eff-f7ac161b75e8_9d7300a7-86e2-406e-9230-eacb5390a809_300x.jpg");
+
+				/* Set a specific height */
+				min-height: 100%;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.responsive {
+			  	width: 100%;
+			  	height: auto;
+				
+			}
+			
+			.John {
+				position: absolute;
+				width: 80%;
+			  	height: auto;
+				left: 10%;
+				top: 50%;
+			}
+			
+			.Scrolldown {
+				position: absolute;
+				width: 20%;
+				max-width: 150px;
+			  	height: auto;
+				bottom: 2%;
+				margin: auto;
+				left: 0;
+				right: 0;
+				text-align: center;
+			}
+			
+			.Logo {
+				position: absolute;
+				width: 50%;
+				max-width: 300px;
+			  	height: auto;
+				top: 10%;
+				margin: auto;
+				left: 0;
+				right: 0;
+				text-align: center;
+			}
+			
+			.Once {
+				position: absolute;
+				width: 80%;
+				height: auto;
+				margin: auto;
+				margin-top: 40%;
+				margin-bottom: 40%;
+				left: 0;
+				right: 0;
+				text-align: center;
+			}
+      
+		</style>
+  	</head>
+  	<body>
+    		<!--<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" class="fullscreen">-->
+		<div class="parallax" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+			<img class="Logo" src="LogoWall.svg" alt="logo" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000" ><!--data-aos-mirror="true"-->
+			<img class="John" src="1john419.png" alt="1johin419" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="2000" data-aos-duration="1000">
+			<img class="Scrolldown" style="vertical-align:middle" src="path896.png" alt="scrolldown" data-aos="fade-down"  data-aos-offset="-600" data-aos-delay="3000" data-aos-duration="1000">
+		</div>
+		<!--<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alt="logo" height="100%" width="100%">-->
+		<pre>
+		
+		
+		</pre>
+		<div id="trigger"></div>
+		<!--<div id="pin" class="Once"></div>-->  
+		<div id="pin">
+			<img src="path880.png" alt="880" class="Once">
+		</div>
+		<div>
+			<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+			Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+			</p>
+		</div>
+		
+		
+		
+   		
+	  	
+		
+		
+		 <!--<div class="square" id="my-sticky-element"></div>  
+		<div class="square" data-aos="fade-in"></div>  
+		<div class="square" id="my-sticky-element"></div> --> 
+     
+	  
+	  
+		
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			//AOS
+			AOS.init();
+			
+			//ScrollMagic
+			// init controller
+			var controller = new ScrollMagic.Controller();
+			 
+	    		// build scenes
+			new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000, offset: 150})
+				.setPin("#pin")
+				//.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		</script>
+		
+		
+		
+  </body>
+</html>
