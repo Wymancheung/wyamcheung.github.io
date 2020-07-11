@@ -18,7 +18,7 @@
 				background-color: white;
 			}
 			
-			.parallax {
+			#parallax {
 				/* The image used */
 				background-image: url("image1025.jpg");
 
@@ -33,7 +33,7 @@
 				background-size: cover;
 			}
 			
-			.parallax2 {
+			#parallax2 {
 				/* The image used */
 				background-image: url("3d1aeb4d-1500-4f02-8eff-f7ac161b75e8_9d7300a7-86e2-406e-9230-eacb5390a809_300x.jpg");
 
@@ -61,7 +61,7 @@
 				top: 50%;
 			}
 			
-			.Scrolldown {
+			#Scrolldown {
 				position: absolute;
 				width: 20%;
 				max-width: 150px;
@@ -73,7 +73,7 @@
 				text-align: center;
 			}
 			
-			.Logo {
+			#Logo {
 				position: absolute;
 				width: 50%;
 				max-width: 300px;
@@ -85,7 +85,7 @@
 				text-align: center;
 			}
 			
-			.Once {
+			#Once {
 				position: absolute;
 				width: 80%;
 				height: auto;
@@ -101,10 +101,10 @@
   	</head>
   	<body>
     		<!--<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alr="pinkblue" class="fullscreen">-->
-		<div class="parallax">
-			<img class="Logo" src="LogoWall.svg" alt="logo">
-			<img class="John" src="1john419.png" alt="1johin419">
-			<img class="Scrolldown" style="vertical-align:middle" src="path896.png" alt="scrolldown">
+		<div id="parallax">
+			<img id="Logo" src="LogoWall.svg" alt="logo">
+			<img id="John" src="1john419.png" alt="1johin419">
+			<img id="Scrolldown" style="vertical-align:middle" src="path896.png" alt="scrolldown">
 		</div>
 		<!--<img src="131648-pink-blue-and-white-polygonal-abstract-background-design.jpg" alt="logo" height="100%" width="100%">-->
 		<pre>
@@ -114,7 +114,7 @@
 		<div id="trigger"></div>
 		<!--<div id="pin" class="Once"></div>-->  
 		<div id="pin">
-			<img src="path880.png" alt="880" class="Once">
+			<img src="path880.png" alt="880" id="Once">
 		</div>
 		<div>
 			<p>
@@ -142,7 +142,9 @@
 			var controller = new ScrollMagic.Controller();
 			 
 	    		// build scenes
-			
+			new ScrollMagic.Scene()
+				.setTween("#s", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+				.addTo(controller);
 			
 			//new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000, offset: 150})
 			//	.setPin("#pin")
