@@ -138,8 +138,12 @@
 		</div>
 		
 		
+		
+		<div id="trigger2"></div>
+		<div id="target">
 			<a style="pointer-events: none; cursor: default;" href=""><img src="52955.png" alt="52955" id="Manpic"></a>
-				
+		</div>
+		
 		<div>
 			<p>
 			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -147,7 +151,6 @@
 			Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
 			</p>
 		</div>
-		
 		
 		
    		
@@ -193,6 +196,13 @@
 			new ScrollMagic.Scene({triggerElement: "#trigger", duration: "60%", offset: 600})
 				.setTween("#Once", {opacity: "0"}) // trigger a TweenMax.to tween
 				.addTo(controller);
+			
+			
+			
+			//new ScrollMagic.Scene({triggerElement: "#trigger", duration: 500, offset: 100})
+			//	.setPin("#target")
+			//	.setTween(    )
+			//	.addTo(controller);
 		</script>
 		
 		
