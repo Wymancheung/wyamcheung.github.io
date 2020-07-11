@@ -61,6 +61,8 @@
 			  	height: auto;
 				left: 10%;
 				top: 50%;
+				
+				opacity: 0;
 			}
 			
 			#Scrolldown {
@@ -85,6 +87,8 @@
 				left: 0;
 				right: 0;
 				text-align: center;
+				
+				opacity: 0;
 			}
 			
 			#Once {
@@ -145,8 +149,17 @@
 			 
 	    		// build scenes
 			new ScrollMagic.Scene()
-				.setTween("#parallax", 2, {opacity: "1"}) // trigger a TweenMax.to tween
+				.setTween("#parallax", 8, {opacity: "1"}) // trigger a TweenMax.to tween
 				.addTo(controller);
+			
+			new ScrollMagic.Scene()
+				.setTween("#parallax", 2, {Logo: "1"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene()
+				.setTween("#parallax", 2, {John: "1"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
 			
 			//new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000, offset: 150})
 			//	.setPin("#pin")
