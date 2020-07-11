@@ -31,6 +31,8 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
+				
+				opacity: 0;
 			}
 			
 			#parallax2 {
@@ -53,7 +55,7 @@
 				
 			}
 			
-			.John {
+			#John {
 				position: absolute;
 				width: 80%;
 			  	height: auto;
@@ -143,7 +145,7 @@
 			 
 	    		// build scenes
 			new ScrollMagic.Scene()
-				.setTween("#s", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+				.setTween("#parallax", 0.5, {opacity: "0.5", scale: 2.5}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			//new ScrollMagic.Scene({triggerElement: "#trigger", duration: 2000, offset: 150})
