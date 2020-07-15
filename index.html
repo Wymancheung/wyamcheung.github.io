@@ -233,7 +233,7 @@
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%"})
-				.setTween("#Aboy", {opacity: "1"}) // trigger a TweenMax.to tween
+				.setTween("#Aboy", {opacity: "1", y: -1000}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "60%", offset: 600})
