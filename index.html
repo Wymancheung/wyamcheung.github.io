@@ -221,7 +221,7 @@
 			// create tween
 			var tween = new TimelineMax()
 				.add(gsap.to("#Manpic", {x: screen.width, duration: 1}))
-				.add(gsap.to("#Manpic", {rotation: 0, x: (screen.width*0.3), y: -screen.height, duration: 3}));
+				.add(gsap.to("#Manpic", {rotation: 0, x: (screen.width*0.3), y: -(screen.height*.95), duration: 3}));
 
 			// build scene
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "200%", offset: -500})
@@ -233,7 +233,7 @@
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%"})
-				.setTween("#Aboy", {y: -(screen.height*0.7)}) // trigger a TweenMax.to tween
+				.setTween("#Aboy", {y: -(screen.height*0.65)}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%", offset: 1000})
