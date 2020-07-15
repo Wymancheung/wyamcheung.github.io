@@ -225,15 +225,6 @@
 			/////////////(ScrollMagic Path)////////////
 			
 			// create tween
-			var tweenOrg = new TimelineMax()
-				.add(gsap.to("#Manpic", {x: screen.width}));
-
-			// build scene
-			new ScrollMagic.Scene({triggerElement: "#trigger"})
-				.setTween(tweenOrg)
-				.addTo(controller);
-			
-			// create tween
 			var tween = new TimelineMax()
 				.add(gsap.to("#Manpic", {rotation: 0, x: -screen.width/2, y: -200, duration: 1}));
 
