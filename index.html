@@ -230,9 +230,12 @@
 				.add(gsap.to("#Manpic", {rotation: 0, x: (screen.width*0.1), y: -700, duration: 1}));
 
 			// build scene
+			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%", offset: -500})
+				.setTween(tween)
+				.addTo(controller);
+			
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "300%", offset: -500})
 				.setPin("#target")
-				.setTween(tween)
 				.addTo(controller);
 			
 		</script>
