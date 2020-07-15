@@ -213,7 +213,7 @@
 			};	
 			// create tween
 			var tween = new TimelineMax()
-				.add(TweenMax.to($("#Manpic"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}));
+				.add(gsap.to($("#Manpic"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}));
 
 			// build scene
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 500, offset: 100})
