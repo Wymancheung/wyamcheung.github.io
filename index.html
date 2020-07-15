@@ -112,7 +112,8 @@
 			#Manpic {
 				/*position: absolute;*/
 				width: 40%;
-				height: auto;
+				height: auto;	
+				transform: rotate(30deg);
 				/*margin: auto;
 				left: 0;
 				right: 0;
@@ -225,7 +226,7 @@
 			
 			// create tween
 			var tween = new TimelineMax()
-				.add(gsap.to("#Manpic", {rotation: -27, x: 100, y: -100, duration: 1}));
+				.add(gsap.to("#Manpic", {rotation: -30, x: 100, y: -700, duration: 1}));
 
 			// build scene
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 500, offset: 100})
