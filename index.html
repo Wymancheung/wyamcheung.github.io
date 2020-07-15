@@ -114,7 +114,6 @@
 				width: 40%;
 				height: auto;	
 				transform: rotate(-30deg);
-				left: 80%;
 				/*margin: auto;
 				left: 0;
 				right: 0;
@@ -227,6 +226,7 @@
 			
 			// create tween
 			var tween = new TimelineMax()
+				.add(gsap.to("#Manpic", {rotation: 0, x: screen.width/2, y: -200, duration: 1}));
 				.add(gsap.to("#Manpic", {rotation: 0, x: -screen.width/2, y: -200, duration: 1}));
 
 			// build scene
