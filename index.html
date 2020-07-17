@@ -134,6 +134,21 @@
 				
 				opacity: 0;	
 			}
+			
+			#Aboy2 {
+				position: absolute;
+				width: 70%;
+				height: auto;
+				margin: auto;
+				/*margin-top: 40%;
+				margin-bottom: 40%;*/
+				top: 40%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				
+				opacity: 0;	
+			}
       
 		</style>
   	</head>
@@ -161,6 +176,7 @@
 		<div id="target">
 			<a style="pointer-events: none; cursor: default;" href=""><img src="52955.png" alt="52955" id="Manpic"></a>
 			<a style="pointer-events: none; cursor: default;" href=""><img src="path881.png" alt="881" id="Aboy"></a>
+			<a style="pointer-events: none; cursor: default;" href=""><img src="path146.png" alt="146" id="Aboy2"></a>
 		</div>
 		
 		
@@ -242,6 +258,18 @@
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "60%", offset: 1900})
 				.setTween("#Aboy", {opacity: "0"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%"})
+				.setTween("#Aboy2", {y: -(screen.height*0.7)}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%", offset: 2300})
+				.setTween("#Aboy2", {opacity: "1"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "60%", offset: 3200})
+				.setTween("#Aboy2", {opacity: "0"}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			
