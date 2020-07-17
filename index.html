@@ -389,12 +389,12 @@
 				.setTween("#Agirl", {opacity: "1"}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
-			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%", offset: -1000})
-				.setTween("#Girlpic", {y: -(screen.height*1.2)}) // trigger a TweenMax.to tween
-				.addTo(controller);
-			
 			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%"})
 				.setTween("#Girlpic", {opacity: "1"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "60%", offset: -400})
+				.setTween("#Girlpic", {y: -(screen.height*1.2)}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%", offset: -1000})
