@@ -113,11 +113,7 @@
 				position: absolute;
 				width: 40%;
 				height: auto;	
-				transform: rotate(-45deg);
-				/*margin: auto;
-				left: 0;
-				right: 0;
-				text-align: center;*/		
+				transform: rotate(-45deg);	
 			}
 			
 			#Aboy {
@@ -196,7 +192,7 @@
 			
 			#Agirl2 {
 				position: absolute;
-				width: 70%;
+				width: 65%;
 				height: auto;
 				margin: auto;
 				/*margin-top: 40%;
@@ -208,6 +204,16 @@
 				opacity: 0;	
 			}
 			
+			#Girlpic {
+				position: absolute;
+				width: 40%;
+				height: auto;	
+				top: 60%;
+				left: 3%;
+				text-align: center;
+				
+				opacity: 0;
+			}
       
 		</style>
   	</head>
@@ -246,6 +252,7 @@
 		<div id="target2">
 			<a style="pointer-events: none; cursor: default;" href=""><img src="path74.png" alt="path74" id="Agirl"></a>
 			<a style="pointer-events: none; cursor: default;" href=""><img src="path154.png" alt="path154" id="Agirl2"></a>
+			<a style="pointer-events: none; cursor: default;" href=""><img src="35249.png" alt="35249" id="Girlpic"></a>
 		</div>
 		
 		<div>
@@ -383,6 +390,14 @@
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%", offset: -1000})
+				.setTween("#Girlpic", {y: -(screen.height*.8)}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%"})
+				.setTween("#Girlpic", {opacity: "1"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%", offset: -1000})
 				.setTween("#Agirl2", {y: -(screen.height*1.5)}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
@@ -392,6 +407,10 @@
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "60%", offset: 1500})
 				.setTween("#Agirl", {opacity: "0"}) // trigger a TweenMax.to tween
+				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "60%", offset: 1500})
+				.setTween("#Girlpic", {opacity: "0"}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "60%", offset: 1500})
