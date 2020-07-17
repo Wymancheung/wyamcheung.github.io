@@ -191,7 +191,7 @@
 				right: 3%;
 				text-align: center;
 				
-				opacity: 0;	
+				opacity: 1;	
 			}
 			
       
@@ -359,7 +359,7 @@
 				.setPin("#target2")
 				.addTo(controller);
 			
-			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%"})
+			new ScrollMagic.Scene({triggerElement: "#trigger3", duration: "100%", offset: -500})
 				.setTween("#Agirl", {y: -(screen.height*.95)}) // trigger a TweenMax.to tween
 				.addTo(controller);
 			
