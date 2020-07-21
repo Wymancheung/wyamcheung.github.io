@@ -251,14 +251,18 @@
 				width:100%;
 			}
 			
-			.parallaxParent {
-				height: 100vh;
-				overflow: hidden;
-			}
-			.parallaxParent > * {
-				height: 200%;
-				position: relative;
-				top: -100%;
+			#finalbackground {
+				/* The image used */
+				background-image: url("bitmap.jpg");
+
+				/* Set a specific height */
+				min-height: 100%;/*set longer for transit*/
+
+				/* Create the parallax scrolling effect */
+				/*background-attachment: fixed;*/
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 			
       
@@ -311,10 +315,8 @@
 			</div>
 		</div>
 		
-		
-   		<div id="parallax1" class="parallaxParent">
-			<div style="background-image: url(3d1aeb4d-1500-4f02-8eff-f7ac161b75e8_9d7300a7-86e2-406e-9230-eacb5390a809_300x.jpg);"></div>
-		</div>
+		<div id="trigger5"></div>
+		<div id="finalbackground"></div>
 	  	
 		<div>
 			<p>
@@ -478,6 +480,7 @@
 				.setTween("#Agirl2", {opacity: "0"}) // trigger a TweenMax.to tween
 				.addTo(controller);
 		
+			//////////////////////////////////////trigger4///////////////////////////////////////////
 			var images = [
 				"gif_earth/Rotating_earth_(large)1.jpg",
 				"gif_earth/Rotating_earth_(large)2.jpg",
@@ -510,16 +513,18 @@
 			
 			// build scene
 			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: 2000})
-							.setTween(tween)
-							.addTo(controller);
+				.setTween(tween)
+				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "400%"})
 				.setPin("#target3")
 				.addTo(controller);
 			
-			new ScrollMagic.Scene({triggerElement: "#parallax1", duration: "200%"})
-					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-					.addTo(controller);
+			//////////////////////////////////////trigger5///////////////////////////////////////////
+			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "800%", offset: -3000})
+				.setPin("#finalbackground")
+				.addTo(controller);
+
 
 			
 			
