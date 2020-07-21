@@ -495,10 +495,13 @@
 							.setTween(tween)
 							.addTo(controller);
 			
-			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "800%"})
-				.setPin("#target3")
-				.addTo(controller);
+			//new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "800%"})
+			//	.setPin("#target3")
+			//	.addTo(controller);
 			
+			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "100%"})
+				.setTween("body", {background-color: black}) // trigger a TweenMax.to tween
+				.addTo(controller);
 			
 		</script>
 		
