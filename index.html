@@ -491,7 +491,7 @@
 			var obj = {curImg: 0};
 
 			// create tween
-			var tween = TweenMax.to(obj, 0.5,
+			var tween2 = TweenMax.to(obj, 0.5,
 				{
 					curImg: images.length - 1,	// animate propery curImg to number of images
 					roundProps: "curImg",				// only integers so it can be used as an array index
@@ -506,7 +506,7 @@
 			
 			// build scene
 			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: 2000})
-				.setTween(tween)
+				.setTween(tween2)
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "400%"})
@@ -524,9 +524,9 @@
 			//	.setTween(tween)
 			//	.addTo(controller);
 			
-			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "400%"})
-				.setPin("#target4")
-				.addTo(controller);
+			//new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "400%"})
+			//	.setPin("#target4")
+			//	.addTo(controller);
 
 
 			
