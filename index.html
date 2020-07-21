@@ -252,10 +252,17 @@
 			}
 			
 			#finalbackground {
-				width: 100%;
-  				height: 100%;
-  				background-position: center center;
-  				background-repeat: no-repeat;
+				/* The image used */
+				background-image: url("bitmap.jpg");
+
+				/* Set a specific height */
+				min-height: 100%;/*set longer for transit*/
+				
+				/* Create the parallax scrolling effect */
+				/*background-attachment: fixed;*/
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 			
       
@@ -310,7 +317,7 @@
 		
 		<div id="trigger5"></div>
 		<div id="target4">
-			<div class="finalbackground" style="background-image: url('bitmap.jpg');"></div>
+			<div id="finalbackground"></div>
 		</div>
 		
 		<div>
