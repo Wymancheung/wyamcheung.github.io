@@ -252,17 +252,8 @@
 			}
 			
 			#finalbackground {
-				/* The image used */
-				background-image: url("bitmap.jpg");
-
-				/* Set a specific height */
-				min-height: 500%;/*set longer for transit*/
-
-				/* Create the parallax scrolling effect */
-				background-attachment: fixed;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
+				position: absolute;
+				height: 100;
 			}
 			
       
@@ -316,8 +307,9 @@
 		</div>
 		
 		<div id="trigger5"></div>
-		<div id="finalbackground"></div>
-	  	
+		<div id="target4">
+			<a style="pointer-events: none; cursor: default;" href=""><img src="bitmap.jpg" alt="bitmap" id="finalbackground"></a>
+		</div>
 		
 		<div>
 			<p>
@@ -522,9 +514,19 @@
 				.addTo(controller);
 			
 			//////////////////////////////////////trigger5///////////////////////////////////////////
-			//new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "1200%"})
-			//	.setPin("#finalbackground")
+			// create tween
+			//var tween = new TimelineMax()
+			//	.add(gsap.to("#Manpic", {x: screen.width, duration: 1}))
+			//	.add(gsap.to("#Manpic", {rotation: 0, x: (screen.width*0.3), y: -(screen.height*.95), duration: 3}));
+
+			// build scene
+			//new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "200%"})
+			//	.setTween(tween)
 			//	.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "400%"})
+				.setPin("#target4")
+				.addTo(controller);
 
 
 			
