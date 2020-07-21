@@ -260,8 +260,9 @@
 		</div>
 		
 		<div id="trigger4"></div>
-		<img id="myimg" src="gif_earth/Rotating_earth_(large)1.jpg">
-		
+		<div id="target3">
+			<img id="myimg" src="gif_earth/Rotating_earth_(large)1.jpg">
+		</div>
 		
 		<div>
 			<p>
@@ -464,7 +465,7 @@
 							.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "200%"})
-				.setPin("#myimg")
+				.setPin("#target3")
 				.addTo(controller);
 			
 			
