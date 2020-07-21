@@ -233,12 +233,12 @@
 				
 			}
 			
-			#target3 {
+			#bbackground {
 				/* The image used */
 				background-image: url("42243.png");
 
 				/* Set a specific height */
-				min-height: 140%;/*set longer for transit*/
+				min-height: 800%;/*set longer for transit*/
 
 				/* Create the parallax scrolling effect */
 				/*background-attachment: fixed;*/
@@ -290,9 +290,11 @@
 		
 		<div id="btw"></div>
 		
-		<div id="trigger4"></div>
-		<div id="target3">
-			<!--<img id="myimg" src="gif_earth/Rotating_earth_(large)1.jpg">-->
+		<div id="bbackground">
+			<div id="trigger4"></div>
+			<div id="target3">
+				<img id="myimg" src="gif_earth/Rotating_earth_(large)1.jpg">
+			</div>
 		</div>
 		
 		<div>
@@ -499,9 +501,6 @@
 			//	.setPin("#target3")
 			//	.addTo(controller);
 			
-			new ScrollMagic.Scene({triggerElement: "#trigger4", duration: "400%"})
-				.setTween("body", {"background-color": "yellow"}) // trigger a TweenMax.to tween
-				.addTo(controller);
 			
 		</script>
 		
