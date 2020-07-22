@@ -267,18 +267,17 @@
 			}
 			
 			#finalbb {
-				/* The image used */
-				background-image: url("42243.png");
-
-				/* Set a specific height */
-				min-height: 100%;/*set longer for transit*/
-
-				/* Create the parallax scrolling effect */
-				/*background-attachment: fixed;*/
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
+				position: absolute;
+				width: 50%;
+				max-width: 300px;
+			  	height: auto;
+				top: 10%;
+				margin: auto;
+				left: 0;
+				right: 0;
+				text-align: center;
 			}
+			
 			
       
 		</style>
@@ -331,7 +330,7 @@
 		</div>
 		
 		<div id="finalbackground">
-			<div id="finalbb"></div>
+			<a style="pointer-events: none; cursor: default;" href=""><img id="finalbb" src="42243.png" alt="42243"></a>
 		</div>
 		
 		<div>
