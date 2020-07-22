@@ -251,19 +251,6 @@
 				width:100%;
 			}
 			
-			#finalbackground {
-				/* The image used */
-				background-image: url("bitmap.jpg");
-
-				/* Set a specific height */
-				min-height: 100%;/*set longer for transit*/
-				
-				/* Create the parallax scrolling effect */
-				/*background-attachment: fixed;*/
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
 			
       
 		</style>
@@ -314,9 +301,6 @@
 				<a style="pointer-events: none; cursor: default;" href=""><img src="gif_earth/Rotating_earth_(large)1.jpg" alt="path74" id="myimg"></a>
 			</div>
 		</div>
-		
-		<div id="trigger5"></div>
-		<div id="finalbackground"></div>
 		
 		<div>
 			<p>
@@ -521,19 +505,7 @@
 				.addTo(controller);
 			
 			//////////////////////////////////////trigger5///////////////////////////////////////////
-			// create tween
-			var tween3 = new TimelineMax()
-				.add(gsap.to("#finalbackground", {y: -screen.height, duration: 0}))
-				.add(gsap.to("#finalbackground", {y: screen.height, duration: 3}));
-
-			// build scene
-			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "100%"})
-				.setTween(tween3)
-				.addTo(controller);
 			
-			//new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "400%"})
-			//	.setPin("#target4")
-			//	.addTo(controller);
 
 
 			
