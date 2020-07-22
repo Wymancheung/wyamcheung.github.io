@@ -327,8 +327,10 @@
 		</div>
 		
 		<div id="trigger5"></div>
-		<div id="finalbackground">
-			<a style="pointer-events: none; cursor: default;" href=""><img id="finalbb" src="42243.png" alt="42243"></a>
+		<div id="pin2">
+			<div id="finalbackground">
+				<a style="pointer-events: none; cursor: default;" href=""><img id="finalbb" src="42243.png" alt="42243"></a>
+			</div>
 		</div>
 		
 		<div>
@@ -535,7 +537,7 @@
 			
 			//////////////////////////////////////trigger5///////////////////////////////////////////
 			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "400%"})
-				.setPin("#finalbackground")
+				.setPin("#pin2")
 				.addTo(controller);
 			
 			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "100%"})
