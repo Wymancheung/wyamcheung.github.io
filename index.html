@@ -253,13 +253,17 @@
 			
 			
 			#finalbackground {
-				position: absolute;
-				width: 100%;
-				height: auto;
-				margin: auto;
-				left: 0;
-				right: 0;
-				text-align: center;
+				/* The image used */
+				background-image: url("bitmap.jpg");
+
+				/* Set a specific height */
+				min-height: 100%;/*set longer for transit*/
+
+				/* Create the parallax scrolling effect */
+				/*background-attachment: fixed;*/
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 			
 			#finalbb {
@@ -325,8 +329,9 @@
 		
 		<div id="trigger5"></div>
 		<div id="pin2">
-			<a style="pointer-events: none; cursor: default;" href=""><img id="finalbackground" src="bitmap.jpg" alt="bitmap"></a>
-			<!--<a style="pointer-events: none; cursor: default;" href=""><img id="finalbb" src="42243.png" alt="42243"></a>-->
+			<div id="finalbackground"></div>
+			<!--<a style="pointer-events: none; cursor: default;" href=""><img id="finalbackground" src="bitmap.jpg" alt="bitmap"></a>
+			<a style="pointer-events: none; cursor: default;" href=""><img id="finalbb" src="42243.png" alt="42243"></a>-->
 		</div>
 		
 		<div>
