@@ -538,6 +538,10 @@
 			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "100%", offset: 0})
 				.setTween("#finalbb", {y:-screen.height}) // trigger a TweenMax.to tween
 				.addTo(controller);
+			
+			new ScrollMagic.Scene({triggerElement: "#trigger5", duration: "400%"})
+				.setPin("#finalbb")
+				.addTo(controller);
 
 
 			
